@@ -26,7 +26,7 @@ public class P0006 {
     public static int inputNumOfArr() {
         int num;
         Scanner sc = new Scanner(System.in);
-        // loop through array
+        // loop infinite
         while (true) {
             try {
                 System.out.println("Enter a number of array: ");
@@ -47,7 +47,7 @@ public class P0006 {
     public static int inputSearchNum() {
         int s;
         Scanner sc = new Scanner(System.in);
-        // loop through array
+        // loop infinite
         while (true) {
             try {
                 System.out.println("Enter search value: ");
