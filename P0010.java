@@ -22,18 +22,18 @@ public class P0010 {
     public static int inputNumOfArr() {
         int num;
         Scanner sc = new Scanner(System.in);
+        // loop infinite
         while (true) {
             try {
                 System.out.println("Enter a number of array: ");
                 num = Integer.parseInt(sc.nextLine());
-                // if num is negative or zero, print error and require input again
+                // if num is negative or zero
                 if (num <= 0) {
                     System.out.println("Please enter a number greater than 0");
                     continue;
                 }
                 break;
-            } catch (Exception e) {
-                // lỗi nếu: số nguyên, kí tự ko phải số, chuỗi số có khoảng trắng, vượt quá int     
+            } catch (Exception e) {   
                 System.out.println("Please enter a integer");
             }
         }
@@ -43,10 +43,12 @@ public class P0010 {
     public static int inputSearchNum() {
         int s;
         Scanner sc = new Scanner(System.in);
+        // loop infinite
         while (true) {
             try {
                 System.out.println("Enter search value: ");
                 s = Integer.parseInt(sc.nextLine());
+                //if search num is negative or zero
                 if (s <= 0) {
                     System.out.println("Please enter a number greater than 0: ");
                     continue;
@@ -63,7 +65,7 @@ public class P0010 {
     public static int[] GenerateArray(int num) {
         int[] array = new int[num];
         Random rd = new Random();
-        // loop to add random value to each array element
+        // loop through array
         for (int i = 0; i < num; i++) {
             array[i] = rd.nextInt(num);
         }
@@ -73,10 +75,10 @@ public class P0010 {
     public static void displayArray(int[] array) {
         System.out.print("The array:");
         System.out.print("[");
-        // loop to print elements
+        // loop through array
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
-            // if it not final element then print ", " to follow the format
+            // if it not final element 
             if (i < array.length - 1) {
                 System.out.print(", ");
             }
@@ -85,7 +87,7 @@ public class P0010 {
     }
 
     public static void displayIndex(int i, int s) {
-        //if i not equal -1(means find index) print the index
+        //if i not equal -1
             if (i != -1) {
                 System.out.println("Found " + s + " at index: " + i);
             } else {System.out.println("Cannot found!!!");
@@ -94,9 +96,9 @@ public class P0010 {
     }
     
     public static int linnerSearch(int[] arr, int s){
-        //loop to take each element of the array and compare with search number
+        // loop through array
         for (int i = 0; i < arr.length; i++) {
-            // if it equal return the index
+            // if element equal search number 
             if (arr[i] == s) {
                 return i;
             }
